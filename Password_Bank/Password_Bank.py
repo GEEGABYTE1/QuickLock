@@ -1,4 +1,5 @@
 from os import system
+import time
 
 class Node:
     def __init__(self, value, link=None):
@@ -60,6 +61,7 @@ class Password:
                 encrypted_pass = password.encode()
                 self.real_pass =  encrypted_pass[:int(len(encrypted_pass) / 2)] 
                 print('Your encryped password is now: {} '.format(self.real_pass))
+                time.sleep(1)
                 self.current_users_logged_in += 1
                 clear = lambda: system('clear')
                 clear()
